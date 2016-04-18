@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArtFilmRepository.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="FilmRepository.cs" />
     <Compile Include="IFilmRepository.cs" />
