@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFilm", "WebFilm\WebFilm.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFilm.Data", "WebFilm.Data\WebFilm.Data.csproj", "{8F8EC934-7855-46DC-AA3D-C57441F6C318}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFilm.Tests", "WebFilm.Tests\WebFilm.Tests.csproj", "{875309A0-30B6-490C-80C6-4F14FD5F067D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8F8EC934-7855-46DC-AA3D-C57441F6C318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F8EC934-7855-46DC-AA3D-C57441F6C318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F8EC934-7855-46DC-AA3D-C57441F6C318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875309A0-30B6-490C-80C6-4F14FD5F067D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875309A0-30B6-490C-80C6-4F14FD5F067D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875309A0-30B6-490C-80C6-4F14FD5F067D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875309A0-30B6-490C-80C6-4F14FD5F067D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
