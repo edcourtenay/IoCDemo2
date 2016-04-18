@@ -151,9 +151,11 @@
     <Compile Include="App_Start\BindingConfig.cs" />
     <Compile Include="App_Start\FilmRepositoryProvider.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\HttpContextWrapper.cs" />
     <Compile Include="App_Start\IFilmRepositoryFactory.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\ScopeObjectProvider.cs" />
     <Compile Include="Controllers\FilmCountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -162,6 +164,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FilmService.cs" />
     <Compile Include="Services\IFilmService.cs" />
+    <Compile Include="Services\ISiteIdentifierService.cs" />
+    <Compile Include="Services\SiteIdentifierServiceService.cs" />
+    <Compile Include="Site.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebFilm.Data\WebFilm.Data.csproj">

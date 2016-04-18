@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using WebFilm.App_Start;
 using WebFilm.Data;
 
 namespace WebFilm.Services
 {
     public class FilmService : IFilmService
     {
-        private readonly IFilmRepositoryFactory _factory;
+        private readonly IFilmRepository _repository;
 
-        public FilmService(IFilmRepositoryFactory factory)
+        public FilmService(IFilmRepository repository)
         {
-            _factory = factory;
+            _repository = repository;
         }
 
         public IList<Film> GetFilms()
         {
-            var repository = _factory.Create();
-            return repository.Films().ToList();
+            return _repository.Films().ToList();
         }
     }
 }

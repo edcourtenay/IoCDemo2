@@ -1,24 +1,24 @@
-using System.Web;
 using Ninject;
 using Ninject.Activation;
 using WebFilm.Data;
+using WebFilm.Services;
 
 namespace WebFilm.App_Start
 {
     public class FilmRepositoryProvider : Provider<IFilmRepository>
     {
-        private readonly HttpContext _httpContext;
+        private readonly ISiteIdentifierService _siteIdentifierService;
 
-        public FilmRepositoryProvider(HttpContext httpContext)
+        public FilmRepositoryProvider(ISiteIdentifierService siteIdentifierService)
         {
-            _httpContext = httpContext;
+            _siteIdentifierService = siteIdentifierService;
         }
 
         protected override IFilmRepository CreateInstance(IContext context)
         {
-            switch (_httpContext.Request.ServerVariables["HTTP_HOST"])
+            switch (_siteIdentifierService.IdentifyRequest())
             {
-                case "artfilm.localhost":
+                case Site.Arthouse:
                     return context.Kernel.Get<ArtFilmRepository>();
 
                 default:
