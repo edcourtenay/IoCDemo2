@@ -1,4 +1,3 @@
-using System;
 using Ninject.Modules;
 using WebFilm.Data;
 using WebFilm.Services;
@@ -10,10 +9,11 @@ namespace WebFilm.App_Start
         public override void Load()
         {
             Bind<IFilmService>()
-                .To<FilmService>();
+                .To<FilmService>()
+                .InSingletonScope();
 
             Bind<IFilmRepository>()
-                .To<FilmRepository>();
+                .ToProvider<FilmRepositoryProvider>();
         }
     }
 }
